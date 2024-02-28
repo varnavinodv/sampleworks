@@ -8,6 +8,10 @@ import Navigation from './Navigation';
 import Parent from './parent';
 import Parenttwo from './Parenttwo';
 import Count from './Count';
+import Useeffects from './Useeffects';
+import Datafetch from './Datafetch';
+import Datafetchsearch from './Datafetchsearch';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 
@@ -15,11 +19,24 @@ import Count from './Count';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <Routes>
+
+  <Route  path='/fetchdatasearch' element={<Datafetchsearch/>}/>
+  <Route path='/fetchdata/:id' element={<Datafetch/>}/>
+    </Routes>
+    
+    
+    
+    
+    </BrowserRouter>
     {/* <Navigation /> */}
     {/* <Parent/> */}
     {/* <Parenttwo/> */}
-    <Count />
-  
+    {/* <Count /> */}
+    {/* <Useeffects /> */}
+    {/* <Datafetch /> */}
+
   </React.StrictMode>
 );
 
